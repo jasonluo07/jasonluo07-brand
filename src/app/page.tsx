@@ -1,8 +1,14 @@
+import AboutSection from './components/AboutSection';
+import HeroSection from './components/HeroSection';
+import PortfolioSection from './components/PortfolioSection';
+
 const Home = function () {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <main>
+      <HeroSection />
+      <AboutSection />
+      <PortfolioSection />
+    </main>
   );
 };
 
