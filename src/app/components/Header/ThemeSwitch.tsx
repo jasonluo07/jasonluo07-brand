@@ -4,8 +4,10 @@ import { RiMoonFill, RiSunLine } from 'react-icons/ri';
 import { Theme } from './types';
 
 type ThemeSwitchProps = {
-  theme: Theme;
-  setTheme: Dispatch<SetStateAction<Theme>>;
+  // theme: Theme;
+  // setTheme: Dispatch<SetStateAction<Theme>>;
+  theme: string;
+  setTheme: any;
 };
 
 const ThemeSwitch = function ({ theme, setTheme }: ThemeSwitchProps) {
@@ -17,7 +19,7 @@ const ThemeSwitch = function ({ theme, setTheme }: ThemeSwitchProps) {
 
   return (
     <button className="bg-slate-100 p-2 rounded-xl block" onClick={handleThemeToggle}>
-      {isLight ? <RiMoonFill size={25} /> : <RiSunLine size={25} />}
+      {isLight ? <RiMoonFill size={25} color="black" /> : <RiSunLine size={25} color="black" />}
     </button>
   );
 };

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  --top-spacing: 70px;
+  --top-spacing: 73px;
   scroll-padding-top: var(--top-spacing);
 }
 

@@ -9,6 +9,7 @@ import ThemeSwitch from './ThemeSwitch';
 import LanguageSwitch from './LanguageSwitch';
 
 import { Theme, Language } from './types';
+import { useTheme } from 'next-themes';
 
 type NavLink = {
   label: string;
@@ -31,7 +32,7 @@ const NAV_LINKS: NavLink[] = [
 ];
 
 const Header = function () {
-  const [theme, setTheme] = useState<Theme>('light');
+  const { theme, setTheme } = useTheme();
   const [language, setLanguage] = useState<Language>('english');
   const [showMenu, setShowMenu] = useState(false);
   const isLargeScreen = useMediaQuery('(min-width: 768px)');
@@ -47,10 +48,10 @@ const Header = function () {
   }, [isLargeScreen]);
 
   return (
-    <header className="fixed top-0 inset-x-0 px-4 sm:px-20 py-3 shadow bg-white">
+    <header className="fixed top-0 inset-x-0 px-4 sm:px-20 py-3 shadow border-b-[1px] z-50 dark:bg-black">
       <div className="flex justify-between">
         <Link href="#home">
-          <h2 className="text-2xl font-bold leading-[46px]">Jason Luo</h2>
+          <h2 className="text-2xl font-bold leading-[48px]">Jason Luo</h2>
         </Link>
         <div className="md:hidden">
           <button
@@ -63,12 +64,12 @@ const Header = function () {
         <div
           className={`md:flex md:space-x-6 md:items-center ${
             showMenu
-              ? 'block absolute top-[70px] inset-x-0 space-y-6 bg-white px-4 sm:px-20 shadow pt-[32px] pb-[12px]'
+              ? 'block absolute top-[73px] inset-x-0 space-y-6 bg-white dark:bg-black px-4 sm:px-20 shadow pt-[32px] pb-[12px]'
               : 'hidden'
           }`}
         >
           {NAV_LINKS.map((link) => (
-            <Link className="block text-neutral-900" href={link.href} key={link.label}>
+            <Link className="block" href={link.href} key={link.label}>
               {link.label}
             </Link>
           ))}
