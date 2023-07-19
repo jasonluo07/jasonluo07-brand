@@ -1,2 +1,3 @@
 commitlint
+headshot
 tailwindcss

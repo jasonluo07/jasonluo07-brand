@@ -24,7 +24,7 @@ const RootLayout = function ({ children }: RootLayoutProps) {
       <body className={inter.className}>
         <Providers>
           <Header />
-          <main>{children}</main>
+          {children}
           <Footer />
         </Providers>
       </body>
