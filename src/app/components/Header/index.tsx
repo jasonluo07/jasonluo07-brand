@@ -5,7 +5,7 @@ import type { Dispatch, SetStateAction } from 'react';
 import { IoMdMenu, IoMdClose } from 'react-icons/io';
 import { useTheme } from 'next-themes';
 
-import Link from 'next/link';
+import { Link } from 'react-scroll';
 import LanguageSwitch from './LanguageSwitch';
 import ThemeSwitch from './ThemeSwitch';
 
@@ -20,15 +20,15 @@ interface NavLink {
 const NAV_LINKS: NavLink[] = [
   {
     label: 'Home',
-    href: '#home',
+    href: 'hero',
   },
   {
     label: 'About',
-    href: '#about',
+    href: 'about',
   },
   {
     label: 'Portfolio',
-    href: '#portfolio',
+    href: 'portfolio',
   },
 ];
 
@@ -60,7 +60,7 @@ const Header = function () {
       }`}
     >
       <div className="flex justify-between">
-        <Link href="#home">
+        <Link to="hero" className="cursor-pointer" offset={-73}>
           <h2 className="text-2xl font-bold leading-loose">Jason Luo</h2>
         </Link>
         <button
@@ -77,7 +77,15 @@ const Header = function () {
           }`}
         >
           {NAV_LINKS.map((link) => (
-            <Link className="block" href={link.href} key={link.label} onClick={handleMenuToggle}>
+            <Link
+              className="block cursor-pointer"
+              to={link.href}
+              key={link.label}
+              onClick={handleMenuToggle}
+              smooth={true}
+              offset={-73}
+              duration={300}
+            >
               {link.label}
             </Link>
           ))}
