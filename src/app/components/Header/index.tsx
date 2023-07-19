@@ -1,11 +1,13 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import { RiMoonFill, RiSunLine, RiEnglishInput } from 'react-icons/ri';
 import { IoMdMenu, IoMdClose } from 'react-icons/io';
-import { IoLanguage } from 'react-icons/io5';
 
+import Link from 'next/link';
+import LanguageSwitch from './LanguageSwitch';
+import ThemeSwitch from './ThemeSwitch';
+
+import { Language, Theme } from './types';
 import { useMediaQuery } from '@/hooks';
 
 interface NavLink {
@@ -27,47 +29,6 @@ const NAV_LINKS: NavLink[] = [
     href: '#portfolio',
   },
 ];
-
-type ThemeSwitchProps = {
-  theme: Theme;
-  setTheme: React.Dispatch<React.SetStateAction<Theme>>;
-};
-
-const ThemeSwitch = function ({ theme, setTheme }: ThemeSwitchProps) {
-  const isLight = theme === 'light';
-
-  const handleThemeToggle = function () {
-    setTheme(isLight ? 'dark' : 'light');
-  };
-
-  return (
-    <button className="block rounded-xl bg-slate-100 p-2" onClick={handleThemeToggle}>
-      {isLight ? <RiMoonFill size={25} /> : <RiSunLine size={25} />}
-    </button>
-  );
-};
-
-type LanguageSwitchProps = {
-  language: Language;
-  setLanguage: React.Dispatch<React.SetStateAction<Language>>;
-};
-
-const LanguageSwitch = function ({ language, setLanguage }: LanguageSwitchProps) {
-  const isEnglish = language === 'english';
-
-  const handleLanguageToggle = function () {
-    setLanguage(isEnglish ? 'chinese' : 'english');
-  };
-
-  return (
-    <button className="block rounded-xl bg-slate-100 p-2" onClick={handleLanguageToggle}>
-      {isEnglish ? <RiEnglishInput size={25} /> : <IoLanguage size={25} />}
-    </button>
-  );
-};
-
-type Theme = 'light' | 'dark';
-type Language = 'english' | 'chinese';
 
 const Header = function () {
   const [theme, setTheme] = useState<Theme>('light');
