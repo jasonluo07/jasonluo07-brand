@@ -76,7 +76,9 @@ const Header = function () {
   const isLargeScreen = useMediaQuery('(min-width: 768px)');
 
   const handleMenuToggle = function () {
-    setShowMenu(!showMenu);
+    if (!isLargeScreen) {
+      setShowMenu(!showMenu);
+    }
   };
 
   useEffect(() => {
