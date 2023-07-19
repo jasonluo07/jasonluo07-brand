@@ -1,16 +1,19 @@
 'use client';
 
-import { useEffect, useState, Dispatch, SetStateAction } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { RiMoonFill, RiSunLine, RiEnglishInput } from 'react-icons/ri';
 import { IoMdMenu, IoMdClose } from 'react-icons/io';
-import { IoLanguage } from 'react-icons/io5';
 import useMediaQuery from '@/hooks/useMediaQuery';
 
-interface NavLink {
+import ThemeSwitch from './ThemeSwitch';
+import LanguageSwitch from './LanguageSwitch';
+
+import { Theme, Language } from './types';
+
+type NavLink = {
   label: string;
   href: string;
-}
+};
 
 const NAV_LINKS: NavLink[] = [
   {
@@ -26,47 +29,6 @@ const NAV_LINKS: NavLink[] = [
     href: '#portfolio',
   },
 ];
-
-type ThemeSwitchProps = {
-  theme: Theme;
-  setTheme: Dispatch<SetStateAction<Theme>>;
-};
-
-const ThemeSwitch = function ({ theme, setTheme }: ThemeSwitchProps) {
-  const isLight = theme === 'light';
-
-  const handleThemeToggle = function () {
-    setTheme(isLight ? 'dark' : 'light');
-  };
-
-  return (
-    <button className="bg-slate-100 p-2 rounded-xl block" onClick={handleThemeToggle}>
-      {isLight ? <RiMoonFill size={25} /> : <RiSunLine size={25} />}
-    </button>
-  );
-};
-
-type LanguageSwitchProps = {
-  language: Language;
-  setLanguage: Dispatch<SetStateAction<Language>>;
-};
-
-const LanguageSwitch = function ({ language, setLanguage }: LanguageSwitchProps) {
-  const isEnglish = language === 'english';
-
-  const handleLanguageToggle = function () {
-    setLanguage(isEnglish ? 'chinese' : 'english');
-  };
-
-  return (
-    <button className="bg-slate-100 p-2 rounded-xl block" onClick={handleLanguageToggle}>
-      {isEnglish ? <RiEnglishInput size={25} /> : <IoLanguage size={25} />}
-    </button>
-  );
-};
-
-type Theme = 'light' | 'dark';
-type Language = 'english' | 'chinese';
 
 const Header = function () {
   const [theme, setTheme] = useState<Theme>('light');
@@ -91,7 +53,10 @@ const Header = function () {
           <h2 className="text-2xl font-bold leading-[46px]">Jason Luo</h2>
         </Link>
         <div className="md:hidden">
-          <button className="p-2 border border-transparent focus:border-gray-400" onClick={handleMenuToggle}>
+          <button
+            className="p-2 border rounded-md border-transparent  focus:border-gray-400"
+            onClick={handleMenuToggle}
+          >
             {showMenu ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
           </button>
         </div>
