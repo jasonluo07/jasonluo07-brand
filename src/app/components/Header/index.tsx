@@ -54,7 +54,11 @@ const Header = function () {
   }, [isLargeScreen]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-white px-4 py-3 shadow dark:bg-black sm:px-20">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 bg-white px-4 py-3 shadow dark:bg-black sm:px-20 ${
+        !showMenu && 'border-b'
+      }`}
+    >
       <div className="flex justify-between">
         <Link href="#home">
           <h2 className="text-2xl font-bold leading-loose">Jason Luo</h2>
@@ -67,7 +71,7 @@ const Header = function () {
         <div
           className={`md:flex md:items-center md:space-x-6 ${
             showMenu
-              ? 'absolute inset-x-0 top-[72px] z-50 block space-y-6 bg-white px-4 py-3 shadow dark:bg-black sm:px-20'
+              ? 'absolute inset-x-0 top-[73px] z-50 block space-y-6 border-b bg-white px-4 py-3 shadow dark:bg-black sm:px-20'
               : 'hidden'
           }`}
         >
