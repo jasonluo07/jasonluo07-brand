@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { RiMoonFill, RiSunLine, RiEnglishInput } from 'react-icons/ri';
 import { IoMdMenu, IoMdClose } from 'react-icons/io';
 import { IoLanguage } from 'react-icons/io5';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 interface NavLink {
   label: string;
@@ -71,26 +72,17 @@ const Header = function () {
   const [theme, setTheme] = useState<Theme>('light');
   const [language, setLanguage] = useState<Language>('english');
   const [showMenu, setShowMenu] = useState(false);
+  const isLargeScreen = useMediaQuery('(min-width: 768px)');
 
   const handleMenuToggle = function () {
     setShowMenu(!showMenu);
   };
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(min-width: 768px)');
-
-    const handleWindowResize = function () {
-      if (mediaQuery.matches) {
-        setShowMenu(false);
-      }
-    };
-
-    mediaQuery.addEventListener('change', handleWindowResize);
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleWindowResize);
-    };
-  }, []);
+    if (isLargeScreen) {
+      setShowMenu(false);
+    }
+  }, [isLargeScreen]);
 
   return (
     <header className="fixed top-0 inset-x-0 px-4 sm:px-20 py-3 shadow bg-white">
