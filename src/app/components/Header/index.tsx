@@ -63,11 +63,12 @@ const Header = function () {
         <Link href="#home">
           <h2 className="text-2xl font-bold leading-loose">Jason Luo</h2>
         </Link>
-        <div className="md:hidden">
-          <button className="rounded-md border border-transparent p-2 focus:border-gray-400" onClick={handleMenuToggle}>
-            {showMenu ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
-          </button>
-        </div>
+        <button
+          className="block rounded-md border border-transparent p-2 focus:border-gray-400 md:hidden"
+          onClick={handleMenuToggle}
+        >
+          {showMenu ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
+        </button>
         <div
           className={`md:flex md:items-center md:space-x-6 ${
             showMenu
