@@ -1,7 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import type { Dispatch, SetStateAction } from 'react';
 import { IoMdMenu, IoMdClose } from 'react-icons/io';
+import { useTheme } from 'next-themes';
 
 import Link from 'next/link';
 import LanguageSwitch from './LanguageSwitch';
@@ -31,7 +33,10 @@ const NAV_LINKS: NavLink[] = [
 ];
 
 const Header = function () {
-  const [theme, setTheme] = useState<Theme>('light');
+  const { theme = 'light', setTheme } = useTheme() as {
+    theme: Theme;
+    setTheme: Dispatch<SetStateAction<Theme>>;
+  };
   const [language, setLanguage] = useState<Language>('english');
   const [showMenu, setShowMenu] = useState(false);
   const isLargeScreen = useMediaQuery('(min-width: 768px)');
@@ -49,7 +54,7 @@ const Header = function () {
   }, [isLargeScreen]);
 
   return (
-    <header className="fixed inset-x-0 top-0 bg-white px-4 py-3 shadow sm:px-20">
+    <header className="fixed inset-x-0 top-0 z-50 bg-white px-4 py-3 shadow dark:bg-black sm:px-20">
       <div className="flex justify-between">
         <Link href="#home">
           <h2 className="text-2xl font-bold leading-loose">Jason Luo</h2>
@@ -61,7 +66,9 @@ const Header = function () {
         </div>
         <div
           className={`md:flex md:items-center md:space-x-6 ${
-            showMenu ? 'absolute inset-x-0 top-[72px] block space-y-6 bg-white px-4 py-3 shadow sm:px-20' : 'hidden'
+            showMenu
+              ? 'absolute inset-x-0 top-[72px] z-50 block space-y-6 bg-white px-4 py-3 shadow dark:bg-black sm:px-20'
+              : 'hidden'
           }`}
         >
           {NAV_LINKS.map((link) => (

@@ -18,7 +18,7 @@ const LanguageSwitch = function ({ language, setLanguage }: LanguageSwitchProps)
 
   return (
     <button className="block rounded-xl bg-slate-100 p-2" onClick={handleLanguageToggle}>
-      {isEnglish ? <RiEnglishInput size={25} /> : <IoLanguage size={25} />}
+      {isEnglish ? <RiEnglishInput size={25} color="black" /> : <IoLanguage size={25} color="black" />}
     </button>
   );
 };

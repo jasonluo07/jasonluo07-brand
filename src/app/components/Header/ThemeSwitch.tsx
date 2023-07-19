@@ -17,7 +17,7 @@ const ThemeSwitch = function ({ theme, setTheme }: ThemeSwitchProps) {
 
   return (
     <button className="block rounded-xl bg-slate-100 p-2" onClick={handleThemeToggle}>
-      {isLight ? <RiMoonFill size={25} /> : <RiSunLine size={25} />}
+      {isLight ? <RiMoonFill size={25} color="black" /> : <RiSunLine size={25} color="black" />}
     </button>
   );
 };

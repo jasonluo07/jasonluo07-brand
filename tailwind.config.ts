@@ -1,6 +1,7 @@
 import type { Config as TailwindConfig } from 'tailwindcss';
 
 const tailwindConfig: TailwindConfig = {
+  darkMode: 'class',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
