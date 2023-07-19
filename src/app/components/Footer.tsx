@@ -1,6 +1,6 @@
 const Footer = function () {
   return (
-    <footer className="h-[600px] bg-slate-700">
+    <footer className="h-[600px]">
       <div>Footer</div>
     </footer>
   );
