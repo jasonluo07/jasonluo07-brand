@@ -1,6 +1,6 @@
 const Footer = function () {
   return (
-    <footer>
+    <footer className="h-[600px]">
       <div>Footer</div>
     </footer>
   );

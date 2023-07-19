@@ -1,6 +1,6 @@
 const HeroSection = function () {
   return (
-    <section id="hero">
+    <section id="hero" className="h-[600px]">
       <div>Hero Section</div>
     </section>
   );
