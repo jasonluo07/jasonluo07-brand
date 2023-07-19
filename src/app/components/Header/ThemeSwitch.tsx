@@ -1,10 +1,11 @@
+import type { Dispatch, SetStateAction } from 'react';
 import { RiMoonFill, RiSunLine } from 'react-icons/ri';
 
-import { Theme } from './types';
+import type { Theme } from './types';
 
 type ThemeSwitchProps = {
   theme: Theme;
-  setTheme: React.Dispatch<React.SetStateAction<Theme>>;
+  setTheme: Dispatch<SetStateAction<Theme>>;
 };
 
 const ThemeSwitch = function ({ theme, setTheme }: ThemeSwitchProps) {

@@ -4,11 +4,11 @@ import PortfolioSection from './components/PortfolioSection';
 
 const Home = function () {
   return (
-    <main>
+    <>
       <HeroSection />
       <AboutSection />
       <PortfolioSection />
-    </main>
+    </>
   );
 };
 

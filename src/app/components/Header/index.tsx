@@ -7,7 +7,7 @@ import Link from 'next/link';
 import LanguageSwitch from './LanguageSwitch';
 import ThemeSwitch from './ThemeSwitch';
 
-import { Language, Theme } from './types';
+import type { Language, Theme } from './types';
 import { useMediaQuery } from '@/hooks';
 
 interface NavLink {

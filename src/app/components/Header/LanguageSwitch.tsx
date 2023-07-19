@@ -1,11 +1,12 @@
+import type { Dispatch, SetStateAction } from 'react';
 import { RiEnglishInput } from 'react-icons/ri';
 import { IoLanguage } from 'react-icons/io5';
 
-import { Language } from './types';
+import type { Language } from './types';
 
 type LanguageSwitchProps = {
   language: Language;
-  setLanguage: React.Dispatch<React.SetStateAction<Language>>;
+  setLanguage: Dispatch<SetStateAction<Language>>;
 };
 
 const LanguageSwitch = function ({ language, setLanguage }: LanguageSwitchProps) {
