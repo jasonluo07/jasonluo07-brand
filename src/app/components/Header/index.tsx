@@ -64,7 +64,7 @@ const Header = function () {
         <div
           className={`md:flex md:space-x-6 md:items-center ${
             showMenu
-              ? 'block absolute top-[73px] inset-x-0 space-y-6 bg-white dark:bg-black px-4 sm:px-20 shadow pt-[32px] pb-[12px]'
+              ? 'block absolute top-[73px] inset-x-0 space-y-6 bg-white dark:bg-black px-4 sm:px-20 shadow pt-[32px] pb-[12px] z-50'
               : 'hidden'
           }`}
         >
