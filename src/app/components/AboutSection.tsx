@@ -1,27 +1,35 @@
 import Image from 'next/image';
 
-const SKILLS = [
-  { name: 'HTML', style: 'bg-gray-200 text-gray-500' },
-  { name: 'CSS', style: 'bg-gray-200 text-gray-500' },
-  { name: 'JavaScript', style: 'bg-gray-200 text-gray-500' },
-  { name: 'TypeScript', style: 'bg-gray-200 text-gray-500' },
-  { name: 'React', style: 'bg-gray-200 text-gray-500' },
-  { name: 'Next.js', style: 'bg-gray-200 text-gray-500' },
-  { name: 'Redux', style: 'bg-gray-200 text-gray-500' },
-  { name: 'Tailwind CSS', style: 'bg-gray-200 text-gray-500' },
-  { name: 'Node.js', style: 'bg-gray-200 text-gray-500' },
-  { name: 'SQL', style: 'bg-gray-200 text-gray-500' },
-  { name: 'Redis', style: 'bg-gray-200 text-gray-500' },
-  { name: 'Socket.io', style: 'bg-gray-200 text-gray-500' },
-  { name: 'Python', style: 'bg-gray-200 text-gray-500' },
-  { name: 'Django', style: 'bg-gray-200 text-gray-500' },
-  { name: 'Selenium', style: 'bg-gray-200 text-gray-500' },
-  { name: 'Web Crawler', style: 'bg-gray-200 text-gray-500' },
-  { name: 'Git', style: 'bg-gray-200 text-gray-500' },
-  { name: 'GitHub', style: 'bg-gray-200 text-gray-500' },
-  { name: 'Jenkins', style: 'bg-gray-200 text-gray-500' },
-  { name: 'GitHub Actions', style: 'bg-gray-200 text-gray-500' },
-  { name: 'Docker', style: 'bg-gray-200 text-gray-500' },
+type SkillCategory = 'frontend' | 'backend' | 'tools';
+
+type Skill = {
+  name: string;
+  category: SkillCategory;
+  style: string;
+};
+
+const SKILLS: Skill[] = [
+  { name: 'HTML', category: 'frontend', style: 'bg-sky-200 text-sky-500' },
+  { name: 'CSS', category: 'frontend', style: 'bg-sky-200 text-sky-500' },
+  { name: 'JavaScript', category: 'frontend', style: 'bg-sky-200 text-sky-500' },
+  { name: 'TypeScript', category: 'frontend', style: 'bg-sky-200 text-sky-500' },
+  { name: 'React', category: 'frontend', style: 'bg-sky-200 text-sky-500' },
+  { name: 'Next.js', category: 'frontend', style: 'bg-sky-200 text-sky-500' },
+  { name: 'Redux', category: 'frontend', style: 'bg-sky-200 text-sky-500' },
+  { name: 'Tailwind CSS', category: 'frontend', style: 'bg-sky-200 text-sky-500' },
+  { name: 'Node.js', category: 'backend', style: 'bg-amber-200 text-amber-500' },
+  { name: 'SQL', category: 'backend', style: 'bg-amber-200 text-amber-500' },
+  { name: 'Redis', category: 'backend', style: 'bg-amber-200 text-amber-500' },
+  { name: 'Socket.io', category: 'backend', style: 'bg-amber-200 text-amber-500' },
+  { name: 'Python', category: 'backend', style: 'bg-amber-200 text-amber-500' },
+  { name: 'Django', category: 'backend', style: 'bg-amber-200 text-amber-500' },
+  { name: 'Selenium', category: 'backend', style: 'bg-amber-200 text-amber-500' },
+  { name: 'Web Crawler', category: 'backend', style: 'bg-amber-200 text-amber-500' },
+  { name: 'Git', category: 'tools', style: 'bg-lime-200 text-lime-500' },
+  { name: 'GitHub', category: 'tools', style: 'bg-lime-200 text-lime-500' },
+  { name: 'Jenkins', category: 'tools', style: 'bg-lime-200 text-lime-500' },
+  { name: 'GitHub Actions', category: 'tools', style: 'bg-lime-200 text-lime-500' },
+  { name: 'Docker', category: 'tools', style: 'bg-lime-200 text-lime-500' },
 ];
 
 const AboutSection = function () {
