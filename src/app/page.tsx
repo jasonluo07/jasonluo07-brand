@@ -4,7 +4,7 @@ import PortfolioSection from './components/PortfolioSection';
 
 const Home = function () {
   return (
-    <main className="mx-auto max-w-5xl">
+    <main className="mx-auto max-w-5xl px-6">
       <HeroSection />
       <AboutSection />
       <PortfolioSection />
