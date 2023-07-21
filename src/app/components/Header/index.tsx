@@ -4,8 +4,8 @@ import { useTheme } from 'next-themes';
 import type { Dispatch, SetStateAction } from 'react';
 import { useEffect, useState } from 'react';
 import { IoMdClose, IoMdMenu } from 'react-icons/io';
-import { Link } from 'react-scroll';
 
+import { ScrollLink } from '@/components/ui';
 import { useMediaQuery } from '@/hooks';
 
 import LanguageSwitch from './LanguageSwitch';
@@ -60,9 +60,9 @@ const Header = function () {
       }`}
     >
       <div className="flex justify-between">
-        <Link to="hero" className="cursor-pointer" offset={-73}>
+        <ScrollLink to="hero">
           <h2 className="text-2xl font-bold leading-loose">Jason Luo</h2>
-        </Link>
+        </ScrollLink>
         <button
           className="block rounded-md border border-transparent p-2 focus:border-gray-400 md:hidden"
           onClick={handleMenuToggle}
@@ -77,17 +77,9 @@ const Header = function () {
           }`}
         >
           {NAV_LINKS.map((link) => (
-            <Link
-              className="block cursor-pointer"
-              to={link.href}
-              key={link.label}
-              onClick={handleMenuToggle}
-              smooth={true}
-              offset={-73}
-              duration={300}
-            >
+            <ScrollLink key={link.label} className="block" to={link.href} onClick={handleMenuToggle}>
               {link.label}
-            </Link>
+            </ScrollLink>
           ))}
           <ThemeSwitch theme={theme} setTheme={setTheme} />
           <LanguageSwitch language={language} setLanguage={setLanguage} />

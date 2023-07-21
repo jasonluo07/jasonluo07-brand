@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { HiArrowDown } from 'react-icons/hi';
+
+import { ScrollLink } from '@/components/ui';
 
 const HeroSection = function () {
   return (
@@ -17,16 +18,16 @@ const HeroSection = function () {
           I&#39;m a <span className="font-semibold text-teal-600">Fullstack Developer</span> based in Taipei, Taiwan. My
           motivation stems from the joy of problem-solving, and my focus is on creating wonderful web application.
         </p>
-        <Link
-          href="#portfolio"
+        <ScrollLink
+          to="portfolio"
           className="inline-block rounded bg-teal-600 px-6 py-3 font-semibold text-neutral-100 shadow hover:bg-teal-700"
         >
           Portfolio
-        </Link>
+        </ScrollLink>
       </div>
-      <Link href="#about" className="absolute bottom-[2vh] md:bottom-[4vh]">
+      <ScrollLink to="about" className="absolute bottom-[2vh] md:bottom-[4vh]">
         <HiArrowDown size={35} className="animate-bounce" />
-      </Link>
+      </ScrollLink>
     </section>
   );
 };
