@@ -1,6 +1,6 @@
 import type { Dispatch, SetStateAction } from 'react';
-import { RiEnglishInput } from 'react-icons/ri';
 import { IoLanguage } from 'react-icons/io5';
+import { RiEnglishInput } from 'react-icons/ri';
 
 import type { Language } from './types';
 

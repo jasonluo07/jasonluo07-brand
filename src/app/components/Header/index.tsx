@@ -1,16 +1,16 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import type { Dispatch, SetStateAction } from 'react';
-import { IoMdMenu, IoMdClose } from 'react-icons/io';
 import { useTheme } from 'next-themes';
-
+import type { Dispatch, SetStateAction } from 'react';
+import { useEffect, useState } from 'react';
+import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import { Link } from 'react-scroll';
+
+import { useMediaQuery } from '@/hooks';
+
 import LanguageSwitch from './LanguageSwitch';
 import ThemeSwitch from './ThemeSwitch';
-
 import type { Language, Theme } from './types';
-import { useMediaQuery } from '@/hooks';
 
 interface NavLink {
   label: string;

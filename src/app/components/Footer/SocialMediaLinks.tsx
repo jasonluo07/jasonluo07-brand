@@ -1,5 +1,5 @@
-import { AiOutlineGithub, AiOutlineTwitter, AiOutlineLinkedin, AiOutlineYoutube } from 'react-icons/ai';
 import type { IconType } from 'react-icons';
+import { AiOutlineGithub, AiOutlineLinkedin, AiOutlineTwitter, AiOutlineYoutube } from 'react-icons/ai';
 
 type SocialMediaLink = {
   href: string;

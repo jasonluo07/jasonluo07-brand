@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, type ReactNode, useState } from 'react';
 import { ThemeProvider } from 'next-themes';
+import { type ReactNode, useEffect, useState } from 'react';
 
 type ProvidersProps = {
   children: ReactNode;
