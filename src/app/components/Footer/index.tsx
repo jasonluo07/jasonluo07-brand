@@ -11,7 +11,7 @@ const Footer = function () {
       <div className="flex flex-row items-center justify-center space-x-3">
         <SocialMediaLinks />
       </div>
-      <ScrollLink to="hero" className="absolute left-[50%] right-[50%] top-[-45px]">
+      <ScrollLink to="hero" className="absolute left-[50%] top-[-45px] translate-x-[-50%]">
         <HiArrowUp size={35} className="animate-bounce" />
       </ScrollLink>
     </footer>
