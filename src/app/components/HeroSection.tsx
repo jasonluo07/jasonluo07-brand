@@ -8,14 +8,14 @@ const HeroSection = function () {
       id="hero"
       className="relative flex h-[calc(100vh-73px)] flex-col items-center justify-center px-4 text-center md:flex-row md:text-left"
     >
-      <div className="md:w-1/2">
+      <div className="flex justify-center md:w-1/2">
         <Image src="/headshot.jpeg" width={325} height={325} className="rounded-full shadow-2xl" alt="headshot" />
       </div>
-      <div className="ml-4 mt-6 md:mt-0 md:w-3/5">
+      <div className="mt-6 md:ml-4 md:mt-0 md:w-3/5">
         <h1 className="text-4xl font-bold md:text-7xl">Hi, I&#39;m Jason!</h1>
         <p className="mb-6 mt-4 text-lg md:text-2xl">
-          I&#39;m a <span className="font-semibold text-teal-600">Fullstack Engineer</span> based in Taipei, Taiwan.
-          Working towards creating software that makes life easier and more meaningful.
+          I&#39;m a <span className="font-semibold text-teal-600">Fullstack Developer</span> based in Taipei, Taiwan. My
+          motivation stems from the joy of problem-solving, and my focus is on creating wonderful web application.
         </p>
         <Link
           href="#portfolio"
@@ -24,7 +24,7 @@ const HeroSection = function () {
           Portfolio
         </Link>
       </div>
-      <Link href="#about" className="absolute bottom-[5vh] md:bottom-[10vh]">
+      <Link href="#about" className="absolute bottom-[2vh] md:bottom-[4vh]">
         <HiArrowDown size={35} className="animate-bounce" />
       </Link>
     </section>
