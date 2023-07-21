@@ -12,10 +12,10 @@ import LanguageSwitch from './LanguageSwitch';
 import ThemeSwitch from './ThemeSwitch';
 import type { Language, Theme } from './types';
 
-interface NavLink {
+type NavLink = {
   label: string;
   href: string;
-}
+};
 
 const NAV_LINKS: NavLink[] = [
   {
@@ -53,6 +53,8 @@ const Header = function () {
     }
   }, [isLargeScreen]);
 
+  const MenuIcon = showMenu ? IoMdClose : IoMdMenu;
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 bg-white px-4 py-3 shadow dark:bg-black sm:px-20 ${
@@ -67,7 +69,7 @@ const Header = function () {
           className="block rounded-md border border-transparent p-2 focus:border-gray-400 md:hidden"
           onClick={handleMenuToggle}
         >
-          {showMenu ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
+          <MenuIcon size={30} />
         </button>
         <div
           className={`md:flex md:items-center md:space-x-6 ${
@@ -81,8 +83,8 @@ const Header = function () {
               {link.label}
             </ScrollLink>
           ))}
-          <ThemeSwitch theme={theme} setTheme={setTheme} />
-          <LanguageSwitch language={language} setLanguage={setLanguage} />
+          <ThemeSwitch theme={theme} setTheme={setTheme} handleMenuToggle={handleMenuToggle} />
+          <LanguageSwitch language={language} setLanguage={setLanguage} handleMenuToggle={handleMenuToggle} />
         </div>
       </div>
     </header>

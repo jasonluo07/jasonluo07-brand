@@ -7,18 +7,26 @@ import type { Language } from './types';
 type LanguageSwitchProps = {
   language: Language;
   setLanguage: Dispatch<SetStateAction<Language>>;
+  handleMenuToggle: () => void;
 };
 
-const LanguageSwitch = function ({ language, setLanguage }: LanguageSwitchProps) {
+const LanguageSwitch = function ({ language, setLanguage, handleMenuToggle }: LanguageSwitchProps) {
   const isEnglish = language === 'english';
 
   const handleLanguageToggle = function () {
     setLanguage(isEnglish ? 'chinese' : 'english');
   };
 
+  const handleClick = function (_event: React.MouseEvent) {
+    handleLanguageToggle();
+    handleMenuToggle();
+  };
+
+  const Icon = isEnglish ? RiEnglishInput : IoLanguage;
+
   return (
-    <button className="block rounded-xl bg-slate-100 p-2" onClick={handleLanguageToggle}>
-      {isEnglish ? <RiEnglishInput size={25} color="black" /> : <IoLanguage size={25} color="black" />}
+    <button className="block rounded-xl bg-slate-100 p-2" onClick={handleClick}>
+      <Icon size={25} color="black" />
     </button>
   );
 };
