@@ -1,5 +1,5 @@
 import type { IconType } from 'react-icons';
-import { AiOutlineGithub, AiOutlineLinkedin, AiOutlineTwitter, AiOutlineYoutube } from 'react-icons/ai';
+import { AiOutlineGithub, AiOutlineInstagram, AiOutlineLinkedin, AiOutlineTwitter } from 'react-icons/ai';
 
 type SocialMediaLink = {
   href: string;
@@ -8,20 +8,20 @@ type SocialMediaLink = {
 
 const SOCIAL_MEDIA_LINKS: SocialMediaLink[] = [
   {
-    href: 'https://github.com',
+    href: 'https://github.com/jasonluo07',
     Icon: AiOutlineGithub,
+  },
+  {
+    href: 'https://www.linkedin.com/in/shiweiluo',
+    Icon: AiOutlineLinkedin,
+  },
+  {
+    href: 'https://www.instagram.com/qobdop777',
+    Icon: AiOutlineInstagram,
   },
   {
     href: 'https://twitter.com',
     Icon: AiOutlineTwitter,
-  },
-  {
-    href: 'https://www.linkedin.com/in',
-    Icon: AiOutlineLinkedin,
-  },
-  {
-    href: 'https://www.youtube.com/channel',
-    Icon: AiOutlineYoutube,
   },
 ];
 
