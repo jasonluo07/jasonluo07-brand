@@ -14,6 +14,9 @@ const tailwindConfig: TailwindConfig = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      invert: {
+        90: '.9',
+      },
     },
   },
   plugins: [],
