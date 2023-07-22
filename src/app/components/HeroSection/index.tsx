@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { HiArrowDown } from 'react-icons/hi';
 import { RxArrowDown } from 'react-icons/rx';
 
 import { ScrollLink } from '@/components/ui';
@@ -31,6 +30,8 @@ const HATS: Hat[] = [
 ];
 
 const HeroSection = function ({ appendClass }: HeroSectionProps) {
+  let x = 11;
+
   return (
     <section
       id="hero"

@@ -1,5 +1,3 @@
-import { ScrollLink } from '@/components/ui';
-
 import SocialMediaLinks from './SocialMediaLinks';
 
 const Footer = function () {
