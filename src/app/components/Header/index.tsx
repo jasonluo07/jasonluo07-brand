@@ -30,6 +30,10 @@ const NAV_LINKS: NavLink[] = [
     label: 'Portfolio',
     href: 'portfolio',
   },
+  {
+    label: 'Where I am',
+    href: 'whereIAm',
+  },
 ];
 
 const Header = function () {
