@@ -1,5 +1,8 @@
 import Image from 'next/image';
 import { BsArrowUpRightSquare, BsGithub } from 'react-icons/bs';
+import { HiArrowUp } from 'react-icons/hi';
+
+import { ScrollLink } from '@/components/ui';
 
 type PortfolioSectionProps = {
   className?: string;
@@ -17,7 +20,7 @@ const ProjectItem = function () {
         className="rounded-xl shadow-xl hover:opacity-70"
       />
       <div className="mt-8 md:mt-0">
-        <h3 className="text-4xl font-bold">Project 1</h3>
+        <h3 className="text-3xl font-bold">Project 1</h3>
         <p className="mt-6 text-xl">
           This project was built from scratch with technologies such as HTML, CSS, JavaScript, and uses Node.js and
           MongoDB as the backend. The tool features a simple, user-friendly interface that helps you manage your daily
@@ -41,12 +44,15 @@ const PortfolioSection = function ({ className }: PortfolioSectionProps) {
     <section id="portfolio" className={`${className}`}>
       <h2 className="text-center text-4xl font-bold">Portfolio</h2>
       <hr className="mx-auto my-4 h-1 w-6 rounded-lg border-0 bg-teal-500" />
-      <div className="space-y-28 md:mt-16">
+      <div className="space-y-28 md:mt-8">
         <ProjectItem />
         <ProjectItem />
         <ProjectItem />
         <ProjectItem />
       </div>
+      <ScrollLink to="hero" className="mb-[-24px] mt-5 block">
+        <HiArrowUp size={35} className="mx-auto animate-bounce" />
+      </ScrollLink>
     </section>
   );
 };

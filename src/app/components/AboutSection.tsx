@@ -41,18 +41,17 @@ const AboutSection = function ({ className }: AboutSectionProps) {
     <section id="aboutMe" className={`${className}`}>
       <h2 className="text-center text-4xl font-bold">About Me</h2>
       <hr className="mx-auto my-4 h-1 w-6 rounded-lg border-0 bg-teal-500" />
-      <div className="flex flex-col space-y-10 md:flex-row md:space-x-10 md:space-y-0">
+      <div className="flex flex-col space-y-10 md:mt-8 md:flex-row md:space-x-10 md:space-y-0">
         <div>
           <h3 className="mb-6 text-center text-2xl font-bold md:text-left">Get to know me!</h3>
           <article className="flex flex-col space-y-6 text-lg">
             <p>
-              Hello, my name is Jason, and I am an passionate and self-motivated fullstack developer based in Taipei,
+              Hello, my name is Jason, and I am an passionate and self-motivated fullstack developer located in Taipei,
               Taiwan.
             </p>
             <p>
-              I pursued my studies at National Taiwan University with a focus on Physics. While I did not complete my
-              degree, the time I spent studying there has provided me with a strong foundation in problem-solving and
-              analytical thinking.
+              My studies in Physics at National Taiwan University laid a strong foundation for my problem-solving
+              capabilities and analytical thinking.
             </p>
             <p>
               In addition to my academic pursuits, I have a passion for various activities that keep me engaged and
