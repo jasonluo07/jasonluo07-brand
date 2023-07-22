@@ -46,7 +46,10 @@ const Header = function () {
   const isLargeScreen = useMediaQuery('(min-width: 768px)');
 
   const handleMenuToggle = function () {
-    setShowMenu(!showMenu);
+    // Close menu if it's open and the screen is small
+    if (!isLargeScreen) {
+      setShowMenu(!showMenu);
+    }
   };
 
   useEffect(() => {
