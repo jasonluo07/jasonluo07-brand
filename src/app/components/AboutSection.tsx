@@ -79,13 +79,15 @@ const AboutSection = function ({ className }: AboutSectionProps) {
               </p>
             ))}
           </div>
-          <Image
-            src="/Bouldering_Cat.jpeg"
-            alt="Bouldering Cat"
-            width={325}
-            height={325}
-            className="hidden md:absolute md:bottom-0 md:right-0 md:block md:rounded-full"
-          />
+          <div className="mt-6 flex justify-end">
+            <Image
+              src="/Bouldering_Cat.jpeg"
+              alt="Bouldering Cat"
+              width={240}
+              height={240}
+              className="hidden md:block md:rounded-full"
+            />
+          </div>
         </div>
       </div>
     </section>
