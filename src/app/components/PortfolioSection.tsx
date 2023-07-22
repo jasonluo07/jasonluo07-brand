@@ -5,7 +5,7 @@ import { HiArrowUp } from 'react-icons/hi';
 import { ScrollLink } from '@/components/ui';
 
 type PortfolioSectionProps = {
-  className?: string;
+  appendClass?: string;
 };
 
 const ProjectItem = function () {
@@ -39,9 +39,9 @@ const ProjectItem = function () {
   );
 };
 
-const PortfolioSection = function ({ className }: PortfolioSectionProps) {
+const PortfolioSection = function ({ appendClass }: PortfolioSectionProps) {
   return (
-    <section id="portfolio" className={`${className}`}>
+    <section id="portfolio" className={`${appendClass}`}>
       <h2 className="text-center text-4xl font-bold">Portfolio</h2>
       <hr className="mx-auto my-4 h-1 w-6 rounded-lg border-0 bg-teal-500" />
       <div className="space-y-28 md:mt-8">

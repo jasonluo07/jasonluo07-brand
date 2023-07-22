@@ -6,7 +6,7 @@ import { ScrollLink } from '@/components/ui';
 import TypeWriter from './TypeWriter';
 
 type HeroSectionProps = {
-  className?: string;
+  appendClass?: string;
 };
 
 type Hat = {
@@ -29,11 +29,11 @@ const HATS: Hat[] = [
   },
 ];
 
-const HeroSection = function ({ className }: HeroSectionProps) {
+const HeroSection = function ({ appendClass }: HeroSectionProps) {
   return (
     <section
       id="hero"
-      className={`relative mt-[-84px] flex flex-col items-center justify-center text-center md:flex-row md:text-left ${className}`}
+      className={`relative mt-[-84px] flex flex-col items-center justify-center text-center md:flex-row md:text-left ${appendClass}`}
     >
       <div className="flex w-2/3 justify-center md:w-1/2">
         <Image src="/Alan_Turing.png" width={325} height={325} className="rounded-full shadow-2xl" alt="Alan Turing" />

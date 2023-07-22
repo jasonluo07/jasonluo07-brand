@@ -5,9 +5,9 @@ import PortfolioSection from './components/PortfolioSection';
 const Home = function () {
   return (
     <main className="mx-auto max-w-5xl">
-      <HeroSection className="h-[calc(100vh-73px)] p-6" />
-      <AboutSection className="p-6" />
-      <PortfolioSection className="p-6" />
+      <HeroSection appendClass="h-[calc(100vh-73px)] p-6" />
+      <AboutSection appendClass="p-6" />
+      <PortfolioSection appendClass="p-6" />
     </main>
   );
 };
