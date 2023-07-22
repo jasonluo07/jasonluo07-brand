@@ -32,7 +32,7 @@ const NAV_LINKS: NavLink[] = [
   },
   {
     label: 'Location',
-    href: 'Location',
+    href: 'location',
   },
 ];
 

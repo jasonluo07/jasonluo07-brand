@@ -2,7 +2,7 @@
 
 import { useTheme } from 'next-themes';
 
-import { TealDivider } from '@/components/ui';
+import { SectionTitle } from '@/components/ui';
 
 type LocationSectionProps = {
   appendClass?: string;
@@ -13,9 +13,8 @@ const LocationSection = function ({ appendClass }: LocationSectionProps) {
   const isLight = theme === 'light';
 
   return (
-    <section id="Location" className={appendClass}>
-      <h2 className="text-center text-4xl font-bold">Location</h2>
-      <TealDivider />
+    <section id="location" className={appendClass}>
+      <SectionTitle to="location">Location</SectionTitle>
       <p className="text-center md:text-lg">
         You can find me at{' '}
         <a href="https://goo.gl/maps/TYw1Wp3Y1ojWeueQ6" rel="noopener noreferrer" target="_blank">

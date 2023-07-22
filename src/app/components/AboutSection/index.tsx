@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { TealDivider } from '@/components/ui';
+import { SectionTitle } from '@/components/ui';
 
 type SkillCategory = 'frontend' | 'backend' | 'tools';
 
@@ -41,8 +41,7 @@ type AboutSectionProps = {
 const AboutSection = function ({ appendClass }: AboutSectionProps) {
   return (
     <section id="about" className={`${appendClass}`}>
-      <h2 className="text-center text-4xl font-bold">About</h2>
-      <TealDivider />
+      <SectionTitle to="about">About</SectionTitle>
       <div className="flex flex-col space-y-10 md:mt-8 md:flex-row md:space-x-10 md:space-y-0">
         <div>
           <h3 className="mb-6 text-center text-2xl font-bold md:text-left">Get to know me!</h3>

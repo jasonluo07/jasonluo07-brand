@@ -1,4 +1,5 @@
 import ScrollLink from './ScrollLink';
-import TealDivider from './TealDivider';
+import SectionTitle from './SectionTitle';
+import TealDivider from './SectionTitle/TealDivider';
 
-export { ScrollLink, TealDivider };
+export { ScrollLink, SectionTitle, TealDivider };
