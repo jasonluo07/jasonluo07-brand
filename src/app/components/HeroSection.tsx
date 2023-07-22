@@ -3,11 +3,15 @@ import { HiArrowDown } from 'react-icons/hi';
 
 import { ScrollLink } from '@/components/ui';
 
-const HeroSection = function () {
+type HeroSectionProps = {
+  className?: string;
+};
+
+const HeroSection = function ({ className }: HeroSectionProps) {
   return (
     <section
       id="hero"
-      className="relative flex h-[calc(100vh-73px)] flex-col items-center justify-center text-center md:flex-row md:text-left"
+      className={`relative flex flex-col items-center justify-center text-center md:flex-row md:text-left ${className}`}
     >
       <div className="flex justify-center md:w-1/2">
         <Image src="/Alan_Turing.png" width={325} height={325} className="rounded-full shadow-2xl" alt="Alan Turing" />
