@@ -34,7 +34,7 @@ const SKILLS: Skill[] = [
 
 const AboutSection = function () {
   return (
-    <section id="about">
+    <section id="aboutMe">
       <h2 className="text-center text-4xl font-bold">About Me</h2>
       <hr className="mx-auto my-4 h-1 w-6 rounded-lg border-0 bg-teal-500" />
       <div className="flex flex-col space-y-10 md:flex-row md:space-x-10 md:space-y-0">

@@ -25,7 +25,7 @@ const HeroSection = function () {
           Portfolio
         </ScrollLink>
       </div>
-      <ScrollLink to="about" className="absolute bottom-[2vh] md:bottom-[4vh]">
+      <ScrollLink to="aboutMe" className="absolute bottom-[2vh] md:bottom-[4vh]">
         <HiArrowDown size={35} className="animate-bounce" />
       </ScrollLink>
     </section>
