@@ -50,7 +50,7 @@ const PortfolioSection = function ({ className }: PortfolioSectionProps) {
         <ProjectItem />
         <ProjectItem />
       </div>
-      <ScrollLink to="hero" className="mb-[-24px] mt-5 block">
+      <ScrollLink to="hero" className="mb-[-20px] mt-6 block md:mt-10">
         <HiArrowUp size={35} className="mx-auto animate-bounce" />
       </ScrollLink>
     </section>
