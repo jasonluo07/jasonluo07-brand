@@ -1,6 +1,6 @@
 import { HiArrowUp } from 'react-icons/hi';
 
-import { ScrollLink } from '@/components/ui';
+import { ScrollLink, TealDivider } from '@/components/ui';
 
 import ProjectItem from './ProjectItem';
 
@@ -43,7 +43,7 @@ const PortfolioSection = function ({ appendClass }: PortfolioSectionProps) {
   return (
     <section id="portfolio" className={`${appendClass}`}>
       <h2 className="text-center text-4xl font-bold">Portfolio</h2>
-      <hr className="mx-auto my-4 h-1 w-6 rounded-lg border-0 bg-teal-500" />
+      <TealDivider />
       <div className="space-y-28 md:mt-8">
         {PROJECTS.map((project) => (
           <ProjectItem key={project.title} {...project} />

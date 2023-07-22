@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import { TealDivider } from '@/components/ui';
+
 type SkillCategory = 'frontend' | 'backend' | 'tools';
 
 type Skill = {
@@ -40,7 +42,7 @@ const AboutSection = function ({ appendClass }: AboutSectionProps) {
   return (
     <section id="aboutMe" className={`${appendClass}`}>
       <h2 className="text-center text-4xl font-bold">About Me</h2>
-      <hr className="mx-auto my-4 h-1 w-6 rounded-lg border-0 bg-teal-500" />
+      <TealDivider />
       <div className="flex flex-col space-y-10 md:mt-8 md:flex-row md:space-x-10 md:space-y-0">
         <div>
           <h3 className="mb-6 text-center text-2xl font-bold md:text-left">Get to know me!</h3>
