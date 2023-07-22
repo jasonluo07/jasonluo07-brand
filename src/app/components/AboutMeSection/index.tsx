@@ -34,11 +34,11 @@ const SKILLS: Skill[] = [
   { name: 'Docker', category: 'tools', style: 'bg-lime-200 text-lime-500' },
 ];
 
-type AboutSectionProps = {
+type AboutMeSectionProps = {
   appendClass?: string;
 };
 
-const AboutSection = function ({ appendClass }: AboutSectionProps) {
+const AboutMeSection = function ({ appendClass }: AboutMeSectionProps) {
   return (
     <section id="aboutMe" className={`${appendClass}`}>
       <h2 className="text-center text-4xl font-bold">About Me</h2>
@@ -96,4 +96,4 @@ const AboutSection = function ({ appendClass }: AboutSectionProps) {
   );
 };
 
-export default AboutSection;
+export default AboutMeSection;
