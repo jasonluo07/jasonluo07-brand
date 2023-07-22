@@ -37,7 +37,14 @@ const HeroSection = function ({ appendClass }: HeroSectionProps) {
       className={`relative mt-[-84px] flex flex-col items-center justify-center text-center md:flex-row md:text-left ${appendClass}`}
     >
       <div className="flex w-2/3 justify-center md:w-1/2">
-        <Image src="/Alan_Turing.png" width={325} height={325} className="rounded-full shadow-2xl" alt="Alan Turing" />
+        <Image
+          priority
+          src="/Alan_Turing.png"
+          width={325}
+          height={325}
+          className="rounded-full shadow-2xl"
+          alt="Alan Turing"
+        />
       </div>
       <div className="mt-6 md:ml-4 md:mt-0 md:w-1/2">
         <h1 className="text-4xl font-bold md:text-5xl">Hi, I&#39;m Jason!</h1>
