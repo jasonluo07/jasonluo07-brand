@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { HiArrowDown } from 'react-icons/hi';
+import { RxArrowDown } from 'react-icons/rx';
 
 import { ScrollLink } from '@/components/ui';
 
@@ -50,7 +51,7 @@ const HeroSection = function ({ appendClass }: HeroSectionProps) {
         </ScrollLink>
       </div>
       <ScrollLink to="about" className="absolute bottom-[4vh]">
-        <HiArrowDown size={35} className="animate-bounce" />
+        <RxArrowDown size={35} className="animate-bounce" />
       </ScrollLink>
     </section>
   );

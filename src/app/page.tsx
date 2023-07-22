@@ -2,6 +2,7 @@ import AboutSection from './components/AboutSection';
 import HeroSection from './components/HeroSection';
 import LocationSection from './components/LocationSection';
 import PortfolioSection from './components/PortfolioSection';
+import ReturnTopSection from './components/ReturnTopSection';
 
 const Home = function () {
   return (
@@ -10,6 +11,7 @@ const Home = function () {
       <AboutSection appendClass="p-6" />
       <PortfolioSection appendClass="p-6" />
       <LocationSection appendClass="p-6" />
+      <ReturnTopSection />
     </main>
   );
 };
