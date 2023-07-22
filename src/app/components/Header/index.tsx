@@ -46,9 +46,7 @@ const Header = function () {
   const isLargeScreen = useMediaQuery('(min-width: 768px)');
 
   const handleMenuToggle = function () {
-    if (!isLargeScreen) {
-      setShowMenu(!showMenu);
-    }
+    setShowMenu(!showMenu);
   };
 
   useEffect(() => {
@@ -61,7 +59,7 @@ const Header = function () {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b bg-white px-4 py-3 shadow dark:bg-black sm:px-20 ${
+      className={`fixed inset-x-0 top-0 z-50 border-b bg-white px-6 py-3 shadow dark:bg-black sm:px-20 ${
         showMenu && 'dark:border-black'
       }`}
     >
@@ -78,7 +76,7 @@ const Header = function () {
         <div
           className={`md:flex md:items-center md:space-x-6 ${
             showMenu
-              ? 'absolute inset-x-0 top-[73px] z-50 block space-y-6 border-b bg-white px-4 py-3 shadow dark:bg-black sm:px-20'
+              ? 'absolute inset-x-0 top-[73px] z-50 block space-y-6 border-b bg-white px-6 py-3 shadow dark:bg-black sm:px-20'
               : 'hidden'
           }`}
         >
