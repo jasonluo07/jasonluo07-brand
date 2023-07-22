@@ -23,16 +23,16 @@ const NAV_LINKS: NavLink[] = [
     href: 'hero',
   },
   {
-    label: 'About Me',
-    href: 'aboutMe',
+    label: 'About',
+    href: 'about',
   },
   {
     label: 'Portfolio',
     href: 'portfolio',
   },
   {
-    label: 'Where I am',
-    href: 'whereIAm',
+    label: 'Location',
+    href: 'Location',
   },
 ];
 

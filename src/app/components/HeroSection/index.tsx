@@ -49,7 +49,7 @@ const HeroSection = function ({ appendClass }: HeroSectionProps) {
           Portfolio
         </ScrollLink>
       </div>
-      <ScrollLink to="aboutMe" className="absolute bottom-[4vh]">
+      <ScrollLink to="about" className="absolute bottom-[4vh]">
         <HiArrowDown size={35} className="animate-bounce" />
       </ScrollLink>
     </section>

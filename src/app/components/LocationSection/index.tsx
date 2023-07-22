@@ -1,13 +1,13 @@
 import { TealDivider } from '@/components/ui';
 
-type WhereIAmSectionProps = {
+type LocationSectionProps = {
   appendClass?: string;
 };
 
-const WhereIAmSection = function ({ appendClass }: WhereIAmSectionProps) {
+const LocationSection = function ({ appendClass }: LocationSectionProps) {
   return (
-    <section id="whereIAm" className={appendClass}>
-      <h2 className="text-center text-4xl font-bold">Where I am</h2>
+    <section id="Location" className={appendClass}>
+      <h2 className="text-center text-4xl font-bold">Location</h2>
       <TealDivider />
       <div className="flex justify-center">
         <iframe
@@ -17,11 +17,11 @@ const WhereIAmSection = function ({ appendClass }: WhereIAmSectionProps) {
           width={900}
           height={600}
           allowFullScreen
-          className="h-[400px] w-[600px] border-0 lg:h-[600px] lg:w-[900px]"
+          className="h-[360px] w-[600px] border-0 lg:h-[540px] lg:w-[900px]"
         />
       </div>
     </section>
   );
 };
 
-export default WhereIAmSection;
+export default LocationSection;
