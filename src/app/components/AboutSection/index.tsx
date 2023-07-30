@@ -47,23 +47,26 @@ const AboutSection = function ({ appendClass }: AboutSectionProps) {
           <h3 className="mb-6 text-center text-2xl font-bold md:text-left">Get to know me!</h3>
           <article className="flex flex-col space-y-6 text-lg">
             <p>
-              Hello, my name is Jason, and I am an passionate and self-motivated fullstack developer located in Taipei,
-              Taiwan.
+              Hello, my name is Jason, and I am a passionate and self-motivated fullstack developer located in Taipei,
+              Taiwan. My studies in Physics at National Taiwan University laid a strong foundation for my
+              problem-solving capabilities and analytical thinking. With a year of experience as a fullstack engineer, I
+              have accumulated professional skills and knowledge in practical work.
             </p>
             <p>
-              My studies in Physics at National Taiwan University laid a strong foundation for my problem-solving
-              capabilities and analytical thinking.
+              Currently, I am working as a backend engineer at a Game Company, focusing on developing and maintaining
+              high-performance, scalable backend systems. In this role, I have not only deepened my technical expertise
+              but also learned to collaborate with cross-functional teams to achieve business goals.
             </p>
             <p>
-              In addition to my academic pursuits, I have a passion for various activities that keep me engaged and
-              continuously learning. One of my favorite hobbies is bouldering, where I challenge myself to conquer
-              climbing routes and improve my strength and agility. I also enjoy exploring the underwater world through
-              scuba diving, immersing myself in the beauty and serenity of the ocean.
+              In addition to my professional pursuits, I have a passion for various activities such as bouldering and
+              scuba diving. Challenging myself to conquer climbing routes and exploring the beauty and tranquility of
+              the ocean, these interests not only keep me energized but also help cultivate my creativity and
+              problem-solving abilities in work.
             </p>
             <p>
               I firmly believe in the value of constant growth and pushing the boundaries of what is possible. With a
-              deep fascination for technology, I am always eager to expand my knowledge and skills in the field of
-              fullstack engineering.
+              deep fascination for technology, I am always eager to expand my knowledge and skills in the field of web
+              development.
             </p>
             <p>
               I am excited about the opportunities that lie ahead in my career, and I am open to new challenges that
